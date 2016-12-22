@@ -17,3 +17,6 @@ xcode-select --install
 # Set shell
 sudo install -o root -g wheel -m 0644 $FILESYSTEM_MIRROR/etc/shells /etc
 chsh -s $USER_SHELL
+
+# Tips:
+echo "Install VPN: https://vpnauth.lyft.com/#/"
