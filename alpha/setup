@@ -11,6 +11,9 @@ mkdir -p $DEVELOPMENT_PATH
 echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
+# XCode Command Line Tools
+xcode-select --install
+
 # Set shell
 sudo install -o root -g wheel -m 0644 $FILESYSTEM_MIRROR/etc/shells /etc
 chsh -s $USER_SHELL

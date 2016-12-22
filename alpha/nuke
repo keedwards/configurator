@@ -3,28 +3,35 @@
 # Echo all statements
 set -x
 
+# Basic Setup
+RM="sudo rm -fR"
+
 # Uninstall homebrew
 echo "y" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
 # Clean Home Directory
-sudo rm -fR ~/.DS_Store
-sudo rm -fR ~/.Trash
-sudo rm -fR ~/.bash_history
-sudo rm -fR ~/.config
-sudo rm -fR ~/.emacs.d
-sudo rm -fR ~/.ssh/known_hosts
-sudo rm -fR ~/Desktop/*
-sudo rm -fR ~/Documents/*
-sudo rm -fR ~/Downloads/*
-sudo rm -fR ~/Library/Caches/*
-sudo rm -fR ~/Library/Containers/com.docker.docker
-sudo rm -fR ~/Library/Logs/*
-sudo rm -fR ~/Movies
-sudo rm -fR ~/Music
+$RM ~/.DS_Store
+$RM ~/.Trash
+$RM ~/.bash_history
+$RM ~/.config
+$RM ~/.emacs.d
+$RM ~/.ssh/known_hosts
+$RM ~/Desktop/*
+$RM ~/Documents/*
+$RM ~/Downloads/*
+$RM ~/Library/Application\ Support
+$RM ~/Library/Caches/*
+$RM ~/Library/Containers/com.docker.docker
+$RM ~/Library/Containers/com.tinyspeck.slackmacgap
+$RM ~/Library/Developer
+$RM ~/Library/Logs/*
+$RM ~/Movies
+$RM ~/Music
 
 # Clean machine
-sudo rm -fR /var/log/*
-sudo find / -type f -name .DS_Store -delete
+$RM /var/log/*
+$RM /Library/Developer/CommandLineTools
+sudo find / -type f -name .DS_Store -delete &> /dev/null &
 
 # Reset shell
 chsh -s /bin/bash
