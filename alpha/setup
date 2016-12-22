@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DEVELOPMENT_PATH=$HOME/src
+FILESYSTEM_MIRROR=./filesystem
+USER_SHELL=/bin/bash
+
+# Create expected directorys
+mkdir -p $DEVELOPMENT_PATH
+
+# Homebrew
+echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+
+# Set shell
+sudo install -o root -g wheel -m 0644 $FILESYSTEM_MIRROR/etc/shells /etc
+chsh -s $USER_SHELL

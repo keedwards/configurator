@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Echo all statements
+set -x
+
+# Uninstall homebrew
+echo "y" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
+# Clean Home Directory
+sudo rm -fR ~/.DS_Store
+sudo rm -fR ~/.Trash
+sudo rm -fR ~/.bash_history
+sudo rm -fR ~/.config
+sudo rm -fR ~/.emacs.d
+sudo rm -fR ~/.ssh/known_hosts
+sudo rm -fR ~/Desktop/*
+sudo rm -fR ~/Documents/*
+sudo rm -fR ~/Downloads/*
+sudo rm -fR ~/Library/Caches/*
+sudo rm -fR ~/Library/Containers/com.docker.docker
+sudo rm -fR ~/Library/Logs/*
+sudo rm -fR ~/Movies
+sudo rm -fR ~/Music
+
+# Clean machine
+sudo rm -fR /var/log/*
+sudo find / -type f -name .DS_Store -delete
+
+# Reset shell
+chsh -s /bin/bash
