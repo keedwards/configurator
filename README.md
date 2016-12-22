@@ -1,0 +1,2 @@
+# configurator
+Workstation configuration
