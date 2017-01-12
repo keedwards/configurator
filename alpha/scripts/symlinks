@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ln -s $(PWD)/filesystem/Users/kedwards/.aliasrc $HOME
+ln -s $(PWD)/filesystem/Users/kedwards/.bash_profile $HOME
+ln -s $(PWD)/filesystem/Users/kedwards/.bashrc $HOME
+ln -s $(PWD)/filesystem/Users/kedwards/.hushlogin $HOME
+ln -s $(PWD)/filesystem/Users/kedwards/.vimrc $HOME
+
+ln -s ~/Documents/Dropbox/Technical/Filesystem/osx/Users/ken/.bash_secrets $HOME

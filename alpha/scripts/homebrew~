@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+brew update
+brew upgrade
+
+brew tap homebrew/apache
+brew tap homebrew/versions
+
+brew install gmp --c++11
+brew install pkg-config
+brew install readline
+brew install apache-spark
+brew install awscli
+brew install csshx
+
+brew install makedepend
+brew install openssl openssl@1.1
+brew install coreutils --with-gmp
+brew install emacs
+brew install python
+brew install bash
+brew install jq
+brew install gnupg21 --with-gpgsplit --with-readline --with-test
+brew install go
+brew install moreutils
+brew install findutils --with-default-names
+brew install rbenv
+brew install ab --with-ssl-patch
+
+brew cleanup

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+msg="kedwards@lyft.com"
+rounds=128
+
+ssh-keygen -C $msg -a $rounds -o -f ~/.ssh/id_rsa -b 4096 -t rsa
+ssh-keygen -C $msg -a $rounds -o -f ~/.ssh/id_ecdsa -b 521 -t ecdsa
+ssh-keygen -C $msg -a $rounds -o -f ~/.ssh/id_ed25519 -t ed25519

@@ -2,7 +2,7 @@
 
 DEVELOPMENT_PATH=$HOME/src
 FILESYSTEM_MIRROR=./filesystem
-USER_SHELL=/bin/bash
+USER_SHELL=/usr/local/bin/bash
 
 # Create expected directorys
 mkdir -p $DEVELOPMENT_PATH
@@ -14,9 +14,15 @@ brew doctor
 # XCode Command Line Tools
 xcode-select --install
 
+# Create SSH Keys
+scripts/ssh-keys
+
+# Symlinks
+scripts/symlinks
+
+# Homebrew
+scripts/homebrew
+
 # Set shell
 sudo install -o root -g wheel -m 0644 $FILESYSTEM_MIRROR/etc/shells /etc
 chsh -s $USER_SHELL
-
-# Tips:
-echo "Install VPN: https://vpnauth.lyft.com/#/"

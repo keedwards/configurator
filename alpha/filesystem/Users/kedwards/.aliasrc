@@ -1,0 +1,9 @@
+alias ls='ls --color'
+alias ll='ls -l'
+alias gpg=gpg2
+alias bi='brew install -v'
+alias bu='brew upgrade; brew cleanup'
+alias emacs="$EDITOR"
+alias f=fuck
+
+alias awsaccess=~/src/awsaccess/awsaccess.sh
