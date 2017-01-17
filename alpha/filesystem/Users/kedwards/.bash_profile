@@ -17,8 +17,8 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/share/man:/usr/loca
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Golang
-export PATH=/usr/local/opt/go/libexec/bin:$PATH
 export GOPATH=$SRC/go
+export PATH=/usr/local/opt/go/libexec/bin:$GOPATH/bin:$PATH
 
 
 # Homebrew
@@ -79,3 +79,4 @@ hash thefuck 2>/dev/null && eval "$(thefuck --alias)"
 [ -f $HOME/.bash_secrets ] && source $HOME/.bash_secrets
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+source '/Users/kedwards/src/blessclient/lyftprofile' # bless ssh alias

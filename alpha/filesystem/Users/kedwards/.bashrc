@@ -3,3 +3,4 @@
 
 # Set up aliases
 [ -f $HOME/.aliasrc ] && source $HOME/.aliasrc
+source '/Users/kedwards/src/blessclient/lyftprofile' # bless ssh alias
