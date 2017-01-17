@@ -1,0 +1,8 @@
+[user]
+	name = Ken Edwards
+	email = kedwards@lyft.com
+	signingkey = F47BCF07AEE7892A
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg2
